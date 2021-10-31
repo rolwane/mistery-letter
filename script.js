@@ -32,4 +32,10 @@ function generateLetter() {
   }
 }
 
+function coutLetter(e) {
+  const text = e.target.value.split(' ');
+  document.querySelector('#carta-contador').innerText = text.length;
+}
+
 document.querySelector('#criar-carta').addEventListener('click', generateLetter);
+document.querySelector('#carta-texto').addEventListener('keyup', coutLetter);
